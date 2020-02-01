@@ -40,12 +40,17 @@ public class RemoveNullFromList
 		CollectionUtils.filter(list, PredicateUtils.notNullPredicate());
 		System.out.println("Size5: " + newlist.size());
 
-		// UUSING LAMBDA
+		// USING LAMBDA
 		list = Lists.newArrayList(null,1,null);
 		list  = list.stream().filter(Predicates.notNull()).collect(Collectors.toList());
 //		list  = list.parallelStream().filter(Predicates.notNull()).collect(Collectors.toList());
 //		list.removeIf(Objects::isNull);
 		System.out.println("Size6: " + list.size());
+
+		List<Integer> parallel = Lists.newArrayList(null, 1, 2, null, 3, null);
+		List<Integer> listWithoutNulls = parallel.parallelStream()
+				.filter(Objects::nonNull)
+				.collect(Collectors.toList());
 
 	}
 }
