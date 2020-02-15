@@ -1,4 +1,4 @@
-package main;
+package main.com.java.basics.stream;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;

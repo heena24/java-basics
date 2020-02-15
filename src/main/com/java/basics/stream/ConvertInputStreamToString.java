@@ -1,4 +1,4 @@
-package main;
+package main.com.java.basics.stream;
 import com.google.common.base.Charsets;
 import com.google.common.io.ByteSource;
 import com.google.common.io.CharStreams;
